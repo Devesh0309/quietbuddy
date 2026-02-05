@@ -15,7 +15,7 @@ import {
 
 /**
  * QUIETBUDDY - Anonymous Listening Service
- * Integrated with provided UPI QR Code
+ * Updated to include phone number in EmailJS payload
  */
 
 // --- SUB-COMPONENTS ---
@@ -243,7 +243,6 @@ const BookingFlow = ({
           <p className="text-zinc-500 text-sm mb-8">Scan the QR code to complete the transfer of <span className="text-zinc-900 font-bold">{pricing[sessionType]}</span>.</p>
           
           <div className="bg-white border border-zinc-200 p-8 rounded-sm mb-8 text-center flex flex-col items-center shadow-sm">
-              {/* UPDATED: QR Code Image Container */}
               <div className="w-64 h-64 border border-zinc-100 p-2 mb-6 bg-white overflow-hidden flex items-center justify-center">
                   <img 
                     src="/qr-code.jpeg" 
@@ -443,7 +442,7 @@ const App = () => {
         from_name: "QuietBuddy Team",
         session_duration: sessionType === '30min' ? '30 Minutes' : '45 Minutes',
         price: pricing[sessionType],
-        user_phone: formData.phone,
+        user_phone: formData.phone, // Variable used for phone number
         user_topic: formData.topic || "N/A",
         admin_email: ADMIN_EMAIL,
       }
