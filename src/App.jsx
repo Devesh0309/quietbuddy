@@ -91,6 +91,22 @@ const LandingPage = ({ navigate }) => (
         </div>
       </div>
     </section>
+    <section className="py-16 px-6 max-w-4xl mx-auto">
+        <h2 className="text-2xl font-light text-zinc-900 mb-12 text-center">The Process</h2>
+        <div className="grid sm:grid-cols-3 gap-8">
+          {[
+            { step: '01', title: 'Schedule', desc: 'Choose a duration and a time that works for you.' },
+            { step: '02', title: 'Pay', desc: 'Secure your session via QR code payment.' },
+            { step: '03', title: 'Talk', desc: 'Receive a secure link to talk with your listener.' }
+          ].map((item, i) => (
+            <div key={i} className="text-center">
+              <span className="block text-4xl font-extralight text-zinc-200 mb-4">{item.step}</span>
+              <h3 className="text-lg font-medium text-zinc-800 mb-2">{item.title}</h3>
+              <p className="text-sm text-zinc-500 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
   </div>
 );
 
