@@ -522,7 +522,7 @@ const App = () => {
               A minimalist, professional space for human connection. Simple, anonymous listening.
             </p>
             <div className="text-[10px] text-zinc-400 space-y-1 uppercase tracking-widest font-bold">
-              <p>© 2024 QuietBuddy</p>
+              <p>© 2026 QuietBuddy</p>
               <p>Inquiry: {ADMIN_EMAIL}</p>
             </div>
           </div>
